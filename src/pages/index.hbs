@@ -1,0 +1,61 @@
+---
+layout: core.hbs
+title: Index
+---
+
+
+    <style type="text/css">
+        .draggable{border: 1px solid black; width: 100px; height: 50px;}
+    </style>
+    <div class="container">
+      <div class="row">
+      <h2 class="text-center">Use your droppable zones inside iframe!</h2>
+      
+        <p>As you know <a href="https://jqueryui.com/">jquery-ui</a> does not maintaining use droppable zones inside iframe. Use <a href="">jquery-ui-droppable-iframe</a> to fix this!</p>
+        <div class="well">
+        <p>Plugin features</p>
+        <ul>
+            <li>Fix droppable position inside iframe</li>
+            <li>You can use iframe scroll, while you are dragging</li>
+            <li>After scroll droppable position works perfect</li> 
+            <li>Works even in IE and Edge</li>
+            <li>You can use native <code>scrollSensitivity</code> and <code>scrollSpeed</code> params</li>
+        </ul>
+</div>
+        <h2 class="text-center">Try it now</h2>
+        <div class="draggable">Drag me</div><br><br>
+        <iframe id="testframe" src="iframe.html" frameborder="0" style="width:100%; height:200px; border:1px solid #e7e7e7;"></iframe>
+      </div>
+
+      <h2>Usage</h2>
+<pre><code>&lt;!--jquery --&gt;
+&lt;script type="text/javascript" src="js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;!--jquery UI --&gt;
+&lt;script type="text/javascript" src="js/jquery-ui-1.11.4.custom.js"&gt;&lt;/script&gt;
+&lt;!-- jquery-ui-droppable-iframe --&gt;
+&lt;script type="text/javascript" src="jquery-ui-droppable-iframe.js"&gt;&lt;/script&gt;    
+&lt;!--Activate drag and drop zones --&gt;
+&lt;script type="text/javascript"&gt;
+$(function() {
+    //After frame loaded
+    $("#testframe").load(function() {
+        //Activate droppable zones
+        $(this).contents().find('.droppable').droppable({
+            drop: function(event, ui) {
+                //ACTION ON DROP HERE
+            }
+        });
+    });
+
+    //Activate draggable zones
+    $('.draggable').draggable({
+        iframeFix: true,    //Core jquery ui params needs for fix iframe bug
+        iframeScroll: true  //This param needs for activate iframeScroll
+    });
+
+});
+&lt;/script&gt;
+</code></pre>
+    </div>
+       
+      <!-- /END THE FEATURETTES -->
