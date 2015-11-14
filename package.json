@@ -1,0 +1,23 @@
+{
+    "name": "jquery-ui-droppable-iframe",
+    "version": "1.0.0",
+    "description": "Use your droppable zones inside iframe",
+    "main": "jquery-ui-droppable-iframe.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "jquery",
+        "jquery-ui",
+        "drag",
+        "drop",
+        "draggable",
+        "droppable"
+    ],
+    "author": "Maksym Pomazan",
+    "license": "MIT",
+    "dependencies": {
+        "assemble": "^0.4.42",
+        "grunt": "^0.4.5"
+    }
+}

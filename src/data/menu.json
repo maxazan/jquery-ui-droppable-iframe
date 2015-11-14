@@ -1,0 +1,19 @@
+[{
+    "title": "Home",
+    "url": "index.html"
+}, {
+    "title": "Documentation",
+    "url": "docs.html"
+}, {
+    "title": "Demos",
+    "submenu": [{
+        "title": "Simple demo",
+        "url": "demo_simple.html"
+    }, {
+        "title": "Vertical/Horizontal scroll",
+        "url": "demo_simple.html"
+    }, {
+        "title": "1000 drop zones demo",
+        "url": "demo_simple.html"
+    }]
+}]

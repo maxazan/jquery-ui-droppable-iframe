@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Index</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <link rel="stylesheet" href="css/monokai_sublime.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default">
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="">jquery-ui-droppable-iframe</a>
+  </div>
+  <div id="navbar" class="collapse navbar-collapse navbar-right">
+    <ul class="nav navbar-nav">
+      
+        
+          <li ><a href="index.html">Home</a></li>
+        
+      
+        
+          <li ><a href="docs.html">Documentation</a></li>
+        
+      
+        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Demos <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              
+                <li><a href="demo_simple.html">Simple demo</a></li>
+              
+                <li><a href="demo_simple.html">Vertical/Horizontal scroll</a></li>
+              
+                <li><a href="demo_simple.html">1000 drop zones demo</a></li>
+              
+            </ul>
+          </li>
+        
+      
+
+    </ul>
+
+
+  </div><!--/.nav-collapse -->
+</div>
+</nav>
+    
+
+
+    <style type="text/css">
+        .draggable{border: 1px solid black; width: 100px; height: 50px;}
+    </style>
+    <div class="container">
+      <div class="row">
+      <h2 class="text-center">Use your droppable zones inside iframe!</h2>
+      
+        <p>As you know <a href="https://jqueryui.com/">jquery-ui</a> does not maintaining use droppable zones inside iframe. Use <a href="">jquery-ui-droppable-iframe</a> to fix this!</p>
+        <div class="well">
+        <p>Plugin features</p>
+        <ul>
+            <li>Fix droppable position inside iframe</li>
+            <li>You can use iframe scroll, while you are dragging</li>
+            <li>After scroll droppable position works perfect</li> 
+            <li>Works even in IE and Edge</li>
+            <li>You can use native <code>scrollSensitivity</code> and <code>scrollSpeed</code> params</li>
+        </ul>
+</div>
+        <h2 class="text-center">Try it now</h2>
+        <div class="draggable">Drag me</div><br><br>
+        <iframe id="testframe" src="iframe.html" frameborder="0" style="width:100%; height:200px; border:1px solid #e7e7e7;"></iframe>
+      </div>
+
+      <h2>Usage</h2>
+<pre><code>&lt;!--jquery --&gt;
+&lt;script type="text/javascript" src="js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;!--jquery UI --&gt;
+&lt;script type="text/javascript" src="js/jquery-ui-1.11.4.custom.js"&gt;&lt;/script&gt;
+&lt;!-- jquery-ui-droppable-iframe --&gt;
+&lt;script type="text/javascript" src="jquery-ui-droppable-iframe.js"&gt;&lt;/script&gt;    
+&lt;!--Activate drag and drop zones --&gt;
+&lt;script type="text/javascript"&gt;
+$(function() {
+    //After frame loaded
+    $("#testframe").load(function() {
+        //Activate droppable zones
+        $(this).contents().find('.droppable').droppable({
+            drop: function(event, ui) {
+                //ACTION ON DROP HERE
+            }
+        });
+    });
+
+    //Activate draggable zones
+    $('.draggable').draggable({
+        iframeFix: true,    //Core jquery ui params needs for fix iframe bug
+        iframeScroll: true  //This param needs for activate iframeScroll
+    });
+
+});
+&lt;/script&gt;
+</code></pre>
+    </div>
+       
+      <!-- /END THE FEATURETTES -->
+      <!-- FOOTER -->
+      <div class="container">
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+      </div>
+    <!-- Bootstrap core JavaScript -->
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.11.4.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-droppable-iframe.js"></script>    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+ <script type="text/javascript">
+
+    $(function() {
+        $("#testframe").load(function() {
+            var iframe = $(this).contents();
+            iframe.find('.droppable').droppable({
+                hoverClass: "ui-droppable-hover",
+                activeClass: "ui-droppable-active",
+                tolerance: "pointer",
+                drop: function(event, ui) {
+                    console.log("DROP");
+                }
+            });
+        });
+
+        $('.draggable').draggable({
+          scroll: true,
+          iframeScroll:true,
+          scrollSensitivity:20,
+            iframeFix: true,
+            opacity: 0.35,
+            helper: "clone",
+            revert: "invalid"
+        });
+
+
+    });
+    </script>    
+  </body>
+</html>
