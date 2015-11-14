@@ -1,19 +1,7 @@
 [{
-    "title": "Home",
-    "url": "index.html"
+    "title": "View on github",
+    "url": "https://github.com/maxazan/jquery-ui-droppable-iframe"
 }, {
-    "title": "Documentation",
-    "url": "docs.html"
-}, {
-    "title": "Demos",
-    "submenu": [{
-        "title": "Simple demo",
-        "url": "demo_simple.html"
-    }, {
-        "title": "Vertical/Horizontal scroll",
-        "url": "demo_simple.html"
-    }, {
-        "title": "1000 drop zones demo",
-        "url": "demo_simple.html"
-    }]
+    "title": "Download",
+    "url": "https://github.com/maxazan/jquery-ui-droppable-iframe/archive/master.zip"
 }]
