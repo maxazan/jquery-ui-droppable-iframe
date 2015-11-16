@@ -79,7 +79,7 @@
 </div>
         <h2 class="text-center">Try it now</h2>
         <div class="draggable">Drag me</div><br><br>
-        <iframe id="testframe" src="iframe.html" frameborder="0" style="width:100%; height:200px; border:1px solid #e7e7e7;"></iframe>
+        <iframe id="testframe" frameborder="0" style="width:100%; height:200px; border:1px solid #e7e7e7;"></iframe>
       </div>
 
       <h2>Usage</h2>
@@ -93,7 +93,7 @@
 &lt;script type="text/javascript"&gt;
 $(function() {
     //After frame loaded
-    $("#testframe").load(function() {
+    $("#testframe").attr('src','iframe.html').load(function() {
         //Activate droppable zones
         $(this).contents().find('.droppable').droppable({
             drop: function(event, ui) {
@@ -134,7 +134,7 @@ $(function() {
  <script type="text/javascript">
 
     $(function() {
-        $("#testframe").load(function() {
+        $("#testframe").attr('src','iframe.html').load(function() {
             var iframe = $(this).contents();
             iframe.find('.droppable').droppable({
                 hoverClass: "ui-droppable-hover",
