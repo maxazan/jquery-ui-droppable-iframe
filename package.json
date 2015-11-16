@@ -1,6 +1,6 @@
 {
     "name": "jquery-ui-droppable-iframe",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Use your droppable zones inside iframe",
     "main": "jquery-ui-droppable-iframe.js",
     "repository": {
