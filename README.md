@@ -27,7 +27,7 @@ npm install jquery-ui-droppable-iframe
 <script type="text/javascript">
 $(function() {
     //After frame loaded
-    $("#testframe").load(function() {
+    $("#testframe").attr('src','iframe.html').load(function() {
         //Activate droppable zones
         $(this).contents().find('.droppable').droppable({
             drop: function(event, ui) {
