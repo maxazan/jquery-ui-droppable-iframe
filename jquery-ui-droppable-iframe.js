@@ -1,3 +1,11 @@
+/*
+ * jQuery ui dropppable Plugin
+ * https://github.com/maxazan/jquery-ui-droppable-iframe
+ *
+ * Copyright 2015, Pomazan Maksym
+ * Licensed under the MIT licenses.
+ */
+
 //Save native prepareOffsets method from ddmanager
 var nativePrepareOffsets = $.ui.ddmanager.prepareOffsets;
 
